@@ -6,7 +6,7 @@ const Header = () => {
   const { cart } = useCart();
   return (
     <>
-      <div className="flex justify-between items-center container mx-auto py-5">
+      <div className="flex justify-between items-center py-5 px-[70px]">
         <a href="/" className="text-4xl font-bold text-gray-800">
           Online Shop
         </a>

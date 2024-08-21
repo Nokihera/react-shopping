@@ -30,11 +30,13 @@ const Home = () => {
   });
   return (
     <>
+      <div className="px-[70px]">
       <Categories
         Category={Category}
         handleChangeShowOff={handleChangeShowOff}
       />
       <ProductSection products={filterProducts} />
+      </div>
     </>
   );
 };
