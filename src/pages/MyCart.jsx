@@ -1,5 +1,6 @@
 import React from "react";
 import useCart from "../Zustand/useState";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
   const { cart, removeFromCart } = useCart();
@@ -9,7 +10,24 @@ const MyCart = () => {
   };
 
   return (
-    <div className="flex flex-col items-start justify-center px-[70px]">
+    <div className="flex flex-col items-start justify-center px-[70px] ">
+      <div className="flex justify-start w-full select-none items-center mb-6">
+        <span className="text-gray-700 underline ">
+          <Link
+            to={"/"}
+            className="hover:text-blue-500 transition-all duration-300"
+          >
+            Home
+          </Link>{" "}
+          <i className="fa-solid fa-chevron-right"></i>{" "}
+          <Link
+            to={`/my-cart`}
+            className="hover:text-blue-500 transition-all duration-300"
+          >
+            my-cart
+          </Link>
+        </span>
+      </div>
       <div className="mb-5">
         {cart.length > 0 ? (
           <h1 className="text-3xl text-gray-700">My Cart</h1>
