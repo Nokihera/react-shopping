@@ -1,0 +1,16 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.categories-btn-gp::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.categories-btn-gpl {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
