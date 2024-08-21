@@ -9,7 +9,7 @@ const MyCart = () => {
   };
 
   return (
-    <div className="flex flex-col items-start justify-center container mx-auto">
+    <div className="flex flex-col items-start justify-center px-[70px]">
       <div className="mb-5">
         {cart.length > 0 ? (
           <h1 className="text-3xl text-gray-700">My Cart</h1>
@@ -17,6 +17,7 @@ const MyCart = () => {
           <h1>No Item in Cart</h1>
         )}
       </div>
+        <div className="flex flex-col w-full ">
         {cart.map((item) => (
           <div key={item.id} className="grid grid-cols-4 grid-flow-row justify-items-center items-center h-14 w-full border-b-2">
             <p className="text-gray-700 line-clamp-1">{item.title}</p>
@@ -32,6 +33,7 @@ const MyCart = () => {
             </button>
           </div>
         ))}
+        </div>
     </div>
   );
 };
