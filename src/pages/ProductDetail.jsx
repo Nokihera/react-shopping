@@ -9,13 +9,20 @@ const ProductDetail = () => {
   const { id } = useParams();
   const currentProduct = products.find((product) => product.id == id);
   const handlerOnClick = () => {
-    addToCart({
-      title: currentProduct.title,
-      id: currentProduct.id,
-      price: currentProduct.price,
-      image: currentProduct.image,
-      rate: currentProduct.rating.rate,
-    });
+    const existingItem = cart.find((item) => item.id === currentProduct.id);
+    
+    if (!existingItem) {
+      addToCart({
+        title: currentProduct.title,
+        id: currentProduct.id,
+        price: currentProduct.price,
+        image: currentProduct.image,
+        rate: currentProduct.rating.rate,
+        quantity: currentProduct.quantity,
+      });
+    } else {
+      null;
+    }
   };
   return (
     <div className="flex items-center flex-col container mx-auto gap-5 justify-center max-w-3xl mb-10">
