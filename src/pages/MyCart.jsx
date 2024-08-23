@@ -75,8 +75,8 @@ const MyCart = () => {
         </div>
       </div>
       <div className="flex flex-col items-end py-5 gap-4 w-full mt-auto md:px-[70px] px-[20px]">
-        <div className="grid grid-flow-row grid-cols-4 w-full justify-items-end place-items-center">
-          <p className="text-black font-bold md:text-3xl text-lg">Net Total</p>
+        <div className="grid grid-flow-row grid-cols-4 w-full justify-items-end place-items-center gap-4">
+          <p className="text-black font-bold md:text-3xl text-base">Net Total</p>
         <p className="text-black md:text-xl text-sm font-bold">
           {totalPrice} USD
         </p>
