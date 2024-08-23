@@ -74,7 +74,7 @@ const MyCart = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-flow-row grid-cols-4 items-center py-5 gap-4 w-full place-items-center justify-items-center content-center mt-auto md:mx-[70px] mx-[20px]">
+      <div className="grid grid-flow-row grid-cols-4 items-center py-5 gap-4 w-full place-items-center justify-items-center content-center mt-auto md:px-[70px] px-[20px]">
         <p className="text=black font-bold md:text-3xl text-base">Net Total</p>
         <p className="text-black md:text-xl text-xs font-bold">
           {totalPrice} USD (Tax 10%)
