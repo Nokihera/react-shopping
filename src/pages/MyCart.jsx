@@ -76,16 +76,16 @@ const MyCart = () => {
       </div>
       <div className="flex flex-col items-end py-5 gap-4 w-full mt-auto md:px-[70px] px-[20px]">
         <div className="grid grid-flow-row grid-cols-4 w-full justify-items-end place-items-center">
-          <p className="text-black font-bold md:text-3xl text-2xl">Net Total</p>
-        <p className="text-black md:text-xl text-lg font-bold">
+          <p className="text-black font-bold md:text-3xl text-lg">Net Total</p>
+        <p className="text-black md:text-xl text-base font-bold">
           {totalPrice} USD
         </p>
-        <p className="text-black md:text-xl text-lg font-bold">Tax 10%</p>
-        <p className="text-black md:text-xl text-lg font-bold">
+        <p className="text-black md:text-xl text-base font-bold">Tax 10%</p>
+        <p className="text-black md:text-xl text-base font-bold">
           {grandTotal} USD
         </p>
         </div>
-        <button className="border-2 border-black md:px-4 px-2 py-2 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">
+        <button className="border-2 border-black md:px-4 px-3 py-2 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">
           Order Now
         </button>
       </div>
