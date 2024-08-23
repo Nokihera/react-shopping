@@ -74,16 +74,19 @@ const MyCart = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-flow-row grid-cols-4 items-center py-5 gap-4 w-full place-items-center justify-items-center content-center mt-auto md:px-[70px] px-[20px]">
-        <p className="text=black font-bold md:text-3xl text-base">Net Total</p>
+      <div className="flex flex-col items-end py-5 gap-4 w-full mt-auto md:px-[70px] px-[20px]">
+        <div className="grid grid-flow-row grid-cols-4 w-full justify-items-end place-items-center">
+          <p className="text=black font-bold md:text-3xl text-base">Net Total</p>
         <p className="text-black md:text-xl text-xs font-bold">
-          {totalPrice} USD (Tax 10%)
+          {totalPrice} USD
         </p>
+        <p className="text-black md:text-xl text-xs font-bold">Tax 10%</p>
         <p className="text-black md:text-xl text-xs font-bold">
           {grandTotal} USD
         </p>
+        </div>
         <button className="border-2 border-black md:px-4 px-2 py-2 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">
-          Checkout
+          Order Now
         </button>
       </div>
     </>
