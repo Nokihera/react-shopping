@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-black py-6 md:mx-[70px] mx-[20px] px-[20px]">
+    <div className="bg-black py-6 md:mx-[70px] mx-0 px-[20px]">
       <p className="text-white text-center">
         {" "}
         Copyright &copy;{new Date().getFullYear()}{" "}
