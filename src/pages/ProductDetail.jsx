@@ -3,6 +3,7 @@ import products from "../Products";
 import { Link, useParams } from "react-router-dom";
 import Rating from "../components/Rating";
 import useCart from "../Zustand/useState";
+import toast, { Toaster } from "react-hot-toast";
 
 const ProductDetail = () => {
   const { cart, addToCart } = useCart();
@@ -10,7 +11,6 @@ const ProductDetail = () => {
   const currentProduct = products.find((product) => product.id == id);
   const handlerOnClick = () => {
     const existingItem = cart.find((item) => item.id === currentProduct.id);
-    
     if (!existingItem) {
       addToCart({
         title: currentProduct.title,
@@ -21,7 +21,7 @@ const ProductDetail = () => {
         quantity: currentProduct.quantity,
       });
     } else {
-      null;
+      toast.error("Item is already in cart.");
     }
   };
   return (
@@ -66,6 +66,14 @@ const ProductDetail = () => {
             ? "In Cart"
             : "Add to Cart"}
         </button>
+        <Toaster
+            toastOptions={{
+              className: "",
+              style: {
+                boxShadow: "none",
+              },
+            }}
+          />
       </div>
     </div>
   );
