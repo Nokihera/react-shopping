@@ -71,6 +71,9 @@ const ProductDetail = () => {
               className: "",
               style: {
                 boxShadow: "none",
+                background: "black",
+                color: "white",
+                borderRadius: "15px",
               },
             }}
           />

@@ -21,7 +21,7 @@ const MyCart = () => {
     useCart.getState().decreaseQuantity(id);
   };
   return (
-    <div className="flex flex-col items-start justify-center px-[70px] ">
+    <div className="flex flex-col items-start justify-center md:px-[70px] px-[20px]">
       <div className="flex justify-start w-full select-none items-center mb-6">
         <span className="text-gray-700 underline ">
           <Link
@@ -50,9 +50,9 @@ const MyCart = () => {
         {cart.map((item) => (
           <div
             key={item.id}
-            className="grid grid-cols-4 grid-flow-row justify-items-center items-center border-black h-[170px] w-full border-b-2"
+            className="grid grid-cols-4 grid-flow-row justify-items-center items-center border-black h-[120px] md:h-[180px] w-full border-b-2 gap-3"
           >
-            <img src={item.image} alt="" className="h-40" />
+            <img src={item.image} alt="" className="md:h-40 h-24" />
             <p className="text-gray-700 line-clamp-1">{item.title}</p>
             <p className="text-gray-700 line-clamp-1">{item.price} USD</p>
             <div className="flex gap-2">
@@ -67,10 +67,10 @@ const MyCart = () => {
           </div>
         ))}
         <div className="grid grid-flow-row grid-cols-4 items-center mb-5 gap-4 place-items-center justify-items-center">
-          <p className="text=black font-bold text-3xl">Total Net</p>
-          <p className="text-black text-xl font-bold">{totalPrice} USD x (Tax 10%)</p>
-          <p className="text-black text-xl font-bold">{grandTotal} USD</p>
-          <button className="border-2 border-black px-4 py-2 font-semibold hover:bg-black hover:text-white transition-all duration-300">Checkout</button>
+          <p className="text=black font-bold md:text-3xl text-base">Total Net</p>
+          <p className="text-black md:text-xl text-xs font-bold">{totalPrice} USD (Tax 10%)</p>
+          <p className="text-black md:text-xl text-xs font-bold">{grandTotal} USD</p>
+          <button className="border-2 border-black md:px-4 px-2 py-1 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">Checkout</button>
         </div>
       </div>
     </div>

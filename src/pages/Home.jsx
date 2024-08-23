@@ -30,7 +30,7 @@ const Home = () => {
   });
   return (
     <>
-      <div className="px-[70px]">
+      <div className="md:px-[70px] px-[20px]">
       <Categories
         Category={Category}
         handleChangeShowOff={handleChangeShowOff}
