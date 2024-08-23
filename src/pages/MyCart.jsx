@@ -77,11 +77,11 @@ const MyCart = () => {
       <div className="flex flex-col items-end py-5 gap-4 w-full mt-auto md:px-[70px] px-[20px]">
         <div className="grid grid-flow-row grid-cols-4 w-full justify-items-end place-items-center">
           <p className="text-black font-bold md:text-3xl text-lg">Net Total</p>
-        <p className="text-black md:text-xl text-base font-bold">
+        <p className="text-black md:text-xl text-sm font-bold">
           {totalPrice} USD
         </p>
-        <p className="text-black md:text-xl text-base font-bold">Tax 10%</p>
-        <p className="text-black md:text-xl text-base font-bold">
+        <p className="text-black md:text-xl text-sm font-bold">Tax 10%</p>
+        <p className="text-black md:text-xl text-sm font-bold">
           {grandTotal} USD
         </p>
         </div>
