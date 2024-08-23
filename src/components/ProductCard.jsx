@@ -2,6 +2,9 @@ import React from "react";
 import Rating from "./Rating";
 import { Link } from "react-router-dom";
 import useCart from "../Zustand/useState";
+import { toaster } from "toaster-js/Toaster";
+import { Toast } from "toaster-js";
+import toast, { Toaster } from "react-hot-toast";
 const ProductCard = ({
   product: {
     title,
@@ -13,10 +16,16 @@ const ProductCard = ({
   },
 }) => {
   const { cart, addToCart } = useCart();
+
   const handlerOnClick = () => {
-    cart.find((item) => item.id === id)
-      ? null
-      : addToCart({ title, id, price, image, rate, quantity });
+    const itemExists = cart.find((item) => item.id === id);
+
+    if (itemExists) {
+      toast.error("Item is already in cart.");
+      // Adjust this based on how your Toaster class works
+    } else {
+      addToCart({ title, id, price, image, rate, quantity });
+    }
   };
   return (
     <>
@@ -41,6 +50,14 @@ const ProductCard = ({
           >
             {cart.find((item) => item.id === id) ? "In Cart" : "Add to Cart"}
           </button>
+          <Toaster
+            toastOptions={{
+              className: "",
+              style: {
+                boxShadow: "none",
+              },
+            }}
+          />
         </div>
       </div>
     </>

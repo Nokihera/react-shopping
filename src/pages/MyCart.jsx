@@ -67,9 +67,9 @@ const MyCart = () => {
           </div>
         ))}
         <div className="grid grid-flow-row grid-cols-4 items-center mb-5 gap-4 place-items-center justify-items-center">
-          <p className="text-gray-800 font-bold text-3xl">Total Net</p>
-          <p className="text-gray-600 text-lg font-bold">{totalPrice} USD x (Tax 10%)</p>
-          <p className="text-gray-600 text-lg font-bold">Grand Total {grandTotal} USD</p>
+          <p className="text=black font-bold text-3xl">Total Net</p>
+          <p className="text-black text-xl font-bold">{totalPrice} USD x (Tax 10%)</p>
+          <p className="text-black text-xl font-bold">{grandTotal} USD</p>
           <button className="border-2 border-black px-4 py-2 font-semibold hover:bg-black hover:text-white transition-all duration-300">Checkout</button>
         </div>
       </div>

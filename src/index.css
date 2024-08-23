@@ -1,4 +1,4 @@
-
+@import url(../node_modules/toaster-js/default.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
