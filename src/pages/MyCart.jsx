@@ -21,8 +21,8 @@ const MyCart = () => {
     useCart.getState().decreaseQuantity(id);
   };
   return (
-    <div className="flex flex-col items-start justify-center md:px-[70px] px-[20px]">
-      <div className="flex justify-start w-full select-none items-center mb-6">
+    <div className="flex flex-col items-start justify-center md:px-[70px] px-[20px] min-h-[500px]">
+      <div className="flex justify-start w-full select-none items-center mb-6 ">
         <span className="text-gray-700 underline ">
           <Link
             to={"/"}
@@ -69,13 +69,14 @@ const MyCart = () => {
             </div>
           </div>
         ))}
-        <div className="grid grid-flow-row grid-cols-4 items-center mb-5 gap-4 place-items-center justify-items-center">
+        
+      </div>
+      <div className="grid grid-flow-row grid-cols-4 items-center mb-5 gap-4 w-full pt-3 place-items-center justify-items-center content-center mt-auto">
           <p className="text=black font-bold md:text-3xl text-base">Net Total</p>
           <p className="text-black md:text-xl text-xs font-bold">{totalPrice} USD (Tax 10%)</p>
           <p className="text-black md:text-xl text-xs font-bold">{grandTotal} USD</p>
           <button className="border-2 border-black md:px-4 px-2 py-1 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">Checkout</button>
         </div>
-      </div>
     </div>
   );
 };
