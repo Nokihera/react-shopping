@@ -74,7 +74,7 @@ const MyCart = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-flow-row grid-cols-4 items-center mb-5 gap-4 w-full pt-3 place-items-center justify-items-center content-center mt-auto">
+      <div className="grid grid-flow-row grid-cols-4 items-center py-5 gap-4 w-full place-items-center justify-items-center content-center mt-auto px-[20px]">
         <p className="text=black font-bold md:text-3xl text-base">Net Total</p>
         <p className="text-black md:text-xl text-xs font-bold">
           {totalPrice} USD (Tax 10%)
@@ -82,7 +82,7 @@ const MyCart = () => {
         <p className="text-black md:text-xl text-xs font-bold">
           {grandTotal} USD
         </p>
-        <button className="border-2 border-black md:px-4 px-2 py-1 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">
+        <button className="border-2 border-black md:px-4 px-3 py-2 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">
           Checkout
         </button>
       </div>
