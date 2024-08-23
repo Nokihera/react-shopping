@@ -45,7 +45,7 @@ const MyCart = () => {
             <h1 className="text-3xl text-gray-700">My Cart</h1>
           ) : (
             <div className="flex flex-col items-center w-full justify-center">
-              <img src={emptyCart} alt="" className="h-[350px]" />
+              <img src={emptyCart} alt="" className="h-[250px]" />
               <p className="text-gray-700 text-lg font-bold">
                 No items in cart
               </p>
