@@ -7,8 +7,8 @@ import toast, { Toaster } from "react-hot-toast";
 
 const ProductDetail = () => {
   const { cart, addToCart } = useCart();
-  const { id } = useParams();
-  const currentProduct = products.find((product) => product.id == id);
+  const { slug } = useParams();
+  const currentProduct = products.find((product) => product.slug === slug);
   const handlerOnClick = () => {
     const existingItem = cart.find((item) => item.id === currentProduct.id);
     if (!existingItem) {
@@ -36,7 +36,7 @@ const ProductDetail = () => {
           </Link>{" "}
           <i className="fa-solid fa-chevron-right"></i>{" "}
           <Link
-            to={`/product-detail/${id}`}
+            to={`/product-detail/${slug}`}
             className="hover:text-blue-500 transition-all duration-300"
           >
             Product-detail

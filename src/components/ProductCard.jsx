@@ -13,6 +13,7 @@ const ProductCard = ({
     image,
     rating: { rate },
     quantity,
+    slug,
   },
 }) => {
   const { cart, addToCart } = useCart();
@@ -34,7 +35,7 @@ const ProductCard = ({
         key={id}
       >
         <img src={image} alt="" className="h-40" />
-        <Link to={`/product-detail/${id}`}>
+        <Link to={`/product-detail/${slug}`}>
           <h1 className="text-gray-800 font-bold line-clamp-2">{title}</h1>
         </Link>
         <Rating rate={rate} />

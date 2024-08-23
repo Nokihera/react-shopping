@@ -1,7 +1,7 @@
 import React from "react";
 import useCart from "../Zustand/useState";
 import { Link } from "react-router-dom";
-
+import emptyCart from '../assets/emptyCart.svg'
 const MyCart = () => {
   const { cart, removeFromCart } = useCart();
 
@@ -39,11 +39,14 @@ const MyCart = () => {
           </Link>
         </span>
       </div>
-      <div className="mb-5">
+      <div className="mb-5 w-full">
         {cart.length > 0 ? (
           <h1 className="text-3xl text-gray-700">My Cart</h1>
         ) : (
-          <h1>No Item in Cart</h1>
+          <div className="flex flex-col items-center w-full justify-center">
+          <img src={emptyCart} alt="" className="h-[350px]"/>
+          <p className="text-gray-700 text-lg font-bold">No items in cart</p>
+          </div>
         )}
       </div>
       <div className="flex flex-col w-full gap-5">
@@ -67,7 +70,7 @@ const MyCart = () => {
           </div>
         ))}
         <div className="grid grid-flow-row grid-cols-4 items-center mb-5 gap-4 place-items-center justify-items-center">
-          <p className="text=black font-bold md:text-3xl text-base">Total Net</p>
+          <p className="text=black font-bold md:text-3xl text-base">Net Total</p>
           <p className="text-black md:text-xl text-xs font-bold">{totalPrice} USD (Tax 10%)</p>
           <p className="text-black md:text-xl text-xs font-bold">{grandTotal} USD</p>
           <button className="border-2 border-black md:px-4 px-2 py-1 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">Checkout</button>
