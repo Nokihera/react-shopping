@@ -42,7 +42,7 @@ const MyCart = () => {
         </div>
         <div className="mb-5 w-full">
           {cart.length > 0 ? (
-            <h1 className="text-3xl text-gray-700">My Cart</h1>
+            <h1 className="md:text-3xl text-xl text-gray-700">My Cart</h1>
           ) : (
             <div className="flex flex-col items-center w-full justify-center">
               <img src={emptyCart} alt="" className="h-[230px]" />
@@ -56,41 +56,41 @@ const MyCart = () => {
           {cart.map((item) => (
             <div
               key={item.id}
-              className="grid grid-cols-4 grid-flow-row justify-items-center items-center border-black h-[120px] md:h-[180px] w-full border-b-2 gap-3"
+              className="grid grid-cols-4 grid-flow-row justify-items-center items-center border-black h-[120px] md:h-[135px] w-full border-b-2 gap-3"
             >
-              <img src={item.image} alt="" className="md:h-40 h-24" />
+              <img src={item.image} alt="" className="md:h-32 h-16" />
               <p className="text-gray-700 line-clamp-1">{item.title}</p>
               <p className="text-gray-700 line-clamp-1">{item.price} USD</p>
-              <div className="flex gap-2">
-                <button onClick={() => increaseQuantity(item.id)}>
-                  <i className="fa-solid fa-plus"></i>
+              <div className="flex gap-2 border-[1px] border-black justify-end">
+                <button onClick={() => increaseQuantity(item.id)} className="bg-black text-white px-[3px] md:px-1">
+                  <i className="fa-solid fa-plus text-sm"></i>
                 </button>
                 <span>{item.quantity}</span>
-                <button onClick={() => decreaseQuantity(item.id)}>
-                  <i className="fa-solid fa-minus"></i>
+                <button onClick={() => decreaseQuantity(item.id)} className="bg-black text-white px-[3px] md:px-1">
+                  <i className="fa-solid fa-minus text-sm"></i>
                 </button>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex flex-col items-end py-5 gap-4 w-full mt-auto md:px-[70px] px-[20px]">
+      <div className="flex flex-col items-end py-4 gap-4 w-full mt-auto md:px-[70px] px-[20px]">
         <div className="grid grid-flow-row grid-cols-3 w-full justify-items-end place-items-center gap-2">
           <div className="flex flex-col items-end">
-          <p className="text-black font-bold md:text-2xl text-base">
+          <p className="text-black font-bold md:text-xl text-base">
             Net Total
           </p>
-          <p className="text-black md:text-lg text-sm font-normal md:font-bold">
+          <p className="text-black md:text-base text-sm font-normal md:font-bold">
             {totalPrice} usd
           </p>
           </div>
           <div className="flex flex-col items-end">
-          <p className="text-black font-bold md:text-2xl text-base">Tax </p>
-          <p className="text-black md:text-lg text-sm font-normal md:font-bold">10%</p>
+          <p className="text-black font-bold md:text-xl text-base">Tax </p>
+          <p className="text-black md:text-base text-sm font-normal md:font-bold">10%</p>
           </div>
           <div className="flex flex-col items-end">
-            <p className="text-black font-bold md:text-2xl text-base">Grand Total</p>
-          <p className="text-black md:text-lg text-sm font-normal md:font-bold">
+            <p className="text-black font-bold md:text-xl text-base">Grand Total</p>
+          <p className="text-black md:text-base text-sm font-normal md:font-bold">
             {grandTotal} usd
           </p>
           </div>
