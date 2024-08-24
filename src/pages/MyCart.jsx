@@ -45,7 +45,7 @@ const MyCart = () => {
             <h1 className="text-3xl text-gray-700">My Cart</h1>
           ) : (
             <div className="flex flex-col items-center w-full justify-center">
-              <img src={emptyCart} alt="" className="h-[250px]" />
+              <img src={emptyCart} alt="" className="h-[230px]" />
               <p className="text-gray-700 text-lg font-bold">
                 No items in cart
               </p>
@@ -75,15 +75,25 @@ const MyCart = () => {
         </div>
       </div>
       <div className="flex flex-col items-end py-5 gap-4 w-full mt-auto md:px-[70px] px-[20px]">
-        <div className="grid grid-flow-row grid-cols-4 w-full justify-items-end place-items-center gap-2">
-          <p className="text-black font-bold md:text-3xl text-base">Net Total</p>
-        <p className="text-black md:text-xl text-sm font-bold">
-          {totalPrice} usd
-        </p>
-        <p className="text-black md:text-xl text-sm font-bold">Tax 10%</p>
-        <p className="text-black md:text-xl text-sm font-bold">
-          {grandTotal} usd
-        </p>
+        <div className="grid grid-flow-row grid-cols-3 w-full justify-items-end place-items-center gap-2">
+          <div className="flex flex-col items-end">
+          <p className="text-black font-bold md:text-2xl text-base">
+            Net Total
+          </p>
+          <p className="text-black md:text-lg text-sm font-bold">
+            {totalPrice} usd
+          </p>
+          </div>
+          <div className="flex flex-col items-end">
+          <p className="text-black font-bold md:text-2xl text-base">Tax</p>
+          <p className="text-black md:text-lg text-sm font-bold">10%</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <p className="text-black font-bold md:text-2xl text-base">Grand Total</p>
+          <p className="text-black md:text-lg text-sm font-bold">
+            {grandTotal} usd
+          </p>
+          </div>
         </div>
         <button className="border-2 border-black md:px-4 px-3 py-2 md:py-2 font-semibold hover:bg-black hover:text-white transition-all md:text-base text-sm duration-300">
           Order Now
