@@ -10,8 +10,8 @@ const Header = () => {
         <a href="/" className="text-4xl font-bold text-gray-800">
           Online Shop
         </a>
-        <button className="border-2 border-black px-4 py-2 font-semibold hover:bg-black hover:text-white transition-all duration-300">
-          <Link to={"/my-cart"}>My Cart({useCart.getState().cart.length})</Link>
+        <button className="border-2 border-black px-4 py-2 font-semibold hover:bg-black hover:text-white transition-all duration-300 flex items-center">
+          <Link to={"/my-cart"}><i className="fa-solid fa-cart-shopping"></i> ({useCart.getState().cart.length})</Link>
         </button>
       </div>
     </>

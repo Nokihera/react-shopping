@@ -42,7 +42,7 @@ const MyCart = () => {
         </div>
         <div className="mb-5 w-full">
           {cart.length > 0 ? (
-            <h1 className="md:text-3xl text-xl text-gray-700">My Cart</h1>
+            <h1 className="md:text-3xl text-xl text-gray-700 font-semibold">My Cart</h1>
           ) : (
             <div className="flex flex-col items-center w-full justify-center">
               <img src={emptyCart} alt="" className="h-[230px]" />
@@ -56,7 +56,7 @@ const MyCart = () => {
           {cart.map((item) => (
             <div
               key={item.id}
-              className="grid grid-cols-4 grid-flow-row justify-items-center items-center border-black h-[120px] md:h-[135px] w-full border-b-2 gap-3"
+              className="grid grid-cols-4 grid-flow-row justify-items-center items-center border-black h-[80px] md:h-[135px] w-full border-b-2 gap-3"
             >
               <img src={item.image} alt="" className="md:h-32 h-16" />
               <p className="text-gray-700 line-clamp-1">{item.title}</p>
