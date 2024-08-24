@@ -80,17 +80,17 @@ const MyCart = () => {
           <p className="text-black font-bold md:text-2xl text-base">
             Net Total
           </p>
-          <p className="text-black md:text-lg text-sm font-bold">
+          <p className="text-black md:text-lg text-sm font-normal md:font-bold">
             {totalPrice} usd
           </p>
           </div>
           <div className="flex flex-col items-end">
-          <p className="text-black font-bold md:text-2xl text-base">Tax</p>
-          <p className="text-black md:text-lg text-sm font-bold">10%</p>
+          <p className="text-black font-bold md:text-2xl text-base">Tax </p>
+          <p className="text-black md:text-lg text-sm font-normal md:font-bold">10%</p>
           </div>
           <div className="flex flex-col items-end">
             <p className="text-black font-bold md:text-2xl text-base">Grand Total</p>
-          <p className="text-black md:text-lg text-sm font-bold">
+          <p className="text-black md:text-lg text-sm font-normal md:font-bold">
             {grandTotal} usd
           </p>
           </div>
