@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Categories from "../components/Categories";
 import ProductSection from "../components/ProductSection";
 import products from "../Products";
-
+import MarginTop from "../components/MarginTop";
 const Home = () => {
   const [Category, setCategory] = useState([
     { cate: "All", showOff: true, id: 0 },
@@ -31,12 +31,13 @@ const Home = () => {
   return (
     <>
       <div className="md:px-[70px] px-[20px]">
-      <Categories
-        Category={Category}
-        handleChangeShowOff={handleChangeShowOff}
-      />
-      <ProductSection products={filterProducts} />
+        <Categories
+          Category={Category}
+          handleChangeShowOff={handleChangeShowOff}
+        />
+        <ProductSection products={filterProducts} />
       </div>
+      <MarginTop/>
     </>
   );
 };
